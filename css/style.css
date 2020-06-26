@@ -1,0 +1,56 @@
+header{
+   background-color: #ffe0b3;
+}
+
+h1{
+  text-align:center;
+}
+
+ /* Navigation Buttons CSS Start */ 
+ul.navBtn {
+    list-style-type: none;
+    display:inline-block;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #389dc1;
+    width:100%;
+}
+
+ul.navBtn li {float: left;}
+
+ul.navBtn li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 50px;
+    text-decoration: none;
+    overflow:hidden;
+}
+
+.active {background-color: #e35885;}
+
+
+@media screen and (max-width: 400px){
+    ul.navBtn li .left, 
+    ul.navBtn li {float: none;}
+}
+ /* Navigation Buttons CSS End */ 
+
+ /* Table CSS Start */ 
+table, td, th {    
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width:495px;
+}
+
+th, td {
+    padding: 15px;
+}
+
+tr:nth-child(even){background-color: #ffe0b3}
+ /* Table CSS End */ 

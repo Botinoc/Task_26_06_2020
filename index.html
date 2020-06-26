@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="EmployeeApp">
+
+
+<head>
+  <title>Test Task</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.js"></script>
+  <script src="js/script.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body ng-controller="EmpCtrl">
+
+  <header>
+
+    <h1>Employee Info</h1>
+
+
+    <!-- Tabbed menu for button click event -->
+    <nav>
+      <ul class="navBtn">
+        <li id="getEmp" ng-class="{active: tab == 1}"><a href="#" ng-click="getEmployees(); tab = 1">GetEmployees</a></li>
+        <li id="getStat" ng-class="{active: tab == 2}"><a href="#" ng-click="getStat(); tab = 2">getStat</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <hr>
+    <!-- Tab1: GetEmployees table data is displayed here-->
+    <input class="form-control" type="text" placeholder="" id="search-text" onkeyup="tableSearch()">
+    <table class="table table-striped" id="info-table" ng-show="tab == 1">
+    <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Time</th>
+        </tr>
+    </thead>
+    <tbody>
+       <tr ng-repeat="emp in employee">
+          <td>{{emp.EmployeeID}}</td>
+          <td>{{emp.Name}}</td>
+          <td>{{emp.time}}</td>
+        </tr>
+    </tbody>
+</table>  
+
+    <!-- Tab2: GetStat table data is displayed here -->
+    <table ng-show="tab == 2">
+
+    </table>
+
+  </section>
+  <footer></footer>
+</body>
+
+</html>
